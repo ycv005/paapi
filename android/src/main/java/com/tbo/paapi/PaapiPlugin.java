@@ -62,7 +62,7 @@ public class PaapiPlugin implements FlutterPlugin, MethodCallHandler {
       List<SearchItemsResource> searchItemsResources = new ArrayList<SearchItemsResource>();
       searchItemsResources.add(SearchItemsResource.ITEMINFO_TITLE);
       searchItemsResources.add(SearchItemsResource.OFFERS_LISTINGS_PRICE);
-      searchItemsResources.add(SearchItemsResource.ITEMINFO_PRODUCTINFO);
+      searchItemsResources.add(SearchItemsResource.ITEMINFO_CLASSIFICATIONS);
       searchItemsResources.add(SearchItemsResource.IMAGES_PRIMARY_MEDIUM);
       searchItemsResources.add(SearchItemsResource.OFFERS_LISTINGS_SAVINGBASIS);
 
