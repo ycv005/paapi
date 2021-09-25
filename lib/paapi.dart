@@ -39,7 +39,7 @@ class Paapi {
       _tmp = {
         "status": 200,
         "data": Map<String, dynamic>.from(result),
-      }
+      };
     } catch (e) {
       _tmp = {
         "status": 400,
