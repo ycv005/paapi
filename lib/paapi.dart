@@ -33,10 +33,13 @@ class Paapi {
       "itemCount": itemCount,
       "itemPage": itemPage,
     };
-    var result = await _channel.invokeMethod("paapiInitiate", data);
     Map<String, dynamic> _tmp = {};
     try {
-      _tmp = Map<String, dynamic>.from(result);
+      var result = await _channel.invokeMethod("paapiInitiate", data);
+      _tmp = {
+        "status": 200,
+        "data": Map<String, dynamic>.from(result),
+      }
     } catch (e) {
       _tmp = {
         "status": 400,
