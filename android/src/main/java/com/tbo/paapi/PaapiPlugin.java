@@ -68,7 +68,6 @@ public class PaapiPlugin implements FlutterPlugin, MethodCallHandler {
 
       SearchItemsRequest searchItemsRequest = new SearchItemsRequest().partnerTag(partnerTag).keywords(keywords)
               .searchIndex(searchIndex).resources(searchItemsResources).partnerType(PartnerType.ASSOCIATES).itemCount(itemCount).itemPage(itemPage);
-      HashMap<String, String>
       try {
         SearchItemsResponse response = api.searchItems(searchItemsRequest);
         HashMap<String, HashMap<String, String>> map = new HashMap<String, HashMap<String, String>>();
