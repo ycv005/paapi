@@ -34,6 +34,15 @@ class Paapi {
       "itemPage": itemPage,
     };
     var result = await _channel.invokeMethod("paapiInitiate", data);
-    return Map<String, dynamic>.from(result);
+    Map<String, dynamic> _tmp = {};
+    try {
+      _tmp = Map<String, dynamic>.from(result);
+    } catch (e) {
+      _tmp = {
+        "status": 400,
+        "error": e.toString(),
+      };
+    }
+    return _tmp;
   }
 }
