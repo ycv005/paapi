@@ -41,6 +41,7 @@ class Paapi {
         "data": Map<String, dynamic>.from(result),
       };
     } catch (e) {
+      print("here is paapiInitiate error- ${e.toString()}");
       _tmp = {
         "status": 400,
         "error": e.toString(),
