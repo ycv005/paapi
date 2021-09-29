@@ -29,16 +29,19 @@ class _MyAppState extends State<MyApp> {
     String region = "eu-west-1";
     String keyword = "*";
     String partnerTag = "*";
-    Map<String, dynamic> result = await paapi.paapiInitiate(
-      accessKey: accessKey,
-      secretKey: secretKey,
-      host: host,
-      region: region,
-      keyword: keyword,
-      partnerTag: partnerTag,
-    );
-
-    print("here is initPaapi result - $result");
+    try{
+      Map<String, dynamic> result = await paapi.paapiInitiate(
+        accessKey: accessKey,
+        secretKey: secretKey,
+        host: host,
+        region: region,
+        keyword: keyword,
+        partnerTag: partnerTag,
+      );
+      print("here is initPaapi result - $result");
+    } catch (e){
+      print("here is initPaapi error - ${e.toString()}");
+    }
   }
 
   @override
